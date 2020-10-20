@@ -1,3 +1,3 @@
-const  war: any= 50
+import {Views} from "./mvc/views/views";
 
-console.log(war)
+ const views = new Views()
