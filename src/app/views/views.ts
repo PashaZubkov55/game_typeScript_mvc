@@ -36,15 +36,15 @@ export class Views {
 
     private app: any
     intGame() {
-          this.app = new PIXI.Application({
+        this.app = new PIXI.Application({
             width: 500,
             height: 500,
-             backgroundColor: 0x000000,
+            backgroundColor: 0x000000,
         })
         document.body.appendChild(this.app.view)
     }
-    constructor() {
-    this.intGame()
+    constructor( private modal: Model) {
+        this.intGame()
     }
 
 }
