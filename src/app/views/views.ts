@@ -1,4 +1,6 @@
 import {Model} from '../model/model'
+import{Ship} from "./components/ship";
+
 export class Views {
     private shipHeight: number = 0;
     private shipWidth: number = 0;
@@ -35,6 +37,7 @@ export class Views {
     }
 
     private app: any
+     private container: PIXI.Container
     intGame() {
         this.app = new PIXI.Application({
             width: 500,
@@ -42,8 +45,13 @@ export class Views {
             backgroundColor: 0x000000,
         })
         document.body.appendChild(this.app.view)
+        this.container = new PIXI.Container
+        this.app.stage.addChild(this.container)
+        const ship = new Ship(250, 450)
+        this.container.addChild(ship.ship)
+
     }
-    constructor( private modal: Model) {
+    constructor() {
         this.intGame()
     }
 
