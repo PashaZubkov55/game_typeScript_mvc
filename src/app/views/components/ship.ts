@@ -1,14 +1,20 @@
 
 
-export class Ship {
-   public ship
-    constructor(  x: number, y: number ) {
-         this.ship = new  PIXI.Sprite()
-        const  shipTexture = new PIXI.Graphics()
-        shipTexture.beginFill(0x4169E1)
-        shipTexture.drawEllipse(x, y, 50, 20)
-        shipTexture.endFill()
-        this.ship.addChild(shipTexture)
+export class Ship  {
+    public shipTexture: PIXI.Graphics
+    constructor(  x: number, y: number) {
+
+
+          this.shipTexture = new PIXI.Graphics()
+        this.shipTexture.beginFill(0x4169E1)
+        this.shipTexture.drawEllipse(0,0, 100, 20)
+       this. shipTexture.endFill()
+        this.shipTexture.x = x
+        this.shipTexture.y = y
+
+
+
+
 
     }
 }
