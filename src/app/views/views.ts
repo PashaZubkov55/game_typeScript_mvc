@@ -6,7 +6,7 @@ export class Views {
 
 
     private app: any
-    public ship  = new Ship(250,450 )
+    public ship  = new Ship(this.model.ship_X, this.model.ship_Y, this.model.ship_width, this.model.ship_Height )
 
 
 
@@ -40,7 +40,7 @@ export class Views {
 
 
     }
-    constructor() {
+    constructor(private model: Model ) {
 
         this.intGame()
     }

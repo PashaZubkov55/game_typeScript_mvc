@@ -1,10 +1,11 @@
 import {Views} from "../views/views";
 import{Model} from "../model/model";
-import {Ship} from "../views/components/ship";
+
+
 
 export class Controller{
-    private movement: number = this.view.getShipX
-    constructor(private view:Views){
+    private movement: number = this.modal.ship_X
+    constructor(private view:Views ,private modal: Model){
 
         document.addEventListener('keydown', (e)=>{
             if (e.keyCode ==37){
@@ -16,13 +17,14 @@ export class Controller{
        
     }
 
-
     movementLeft(){
         this.movement -= 5
-        this.view.setShipX = this.movement
+        this.modal.ship_X = this.movement
+        this.view.setShipX = this.modal.ship_X
     }
     movementRight(){
         this.movement += 5
-        this.view.setShipX = this.movement
+        this.modal.ship_X = this.movement
+        this.view.setShipX = this.modal.ship_X
     }
 }
