@@ -1,5 +1,6 @@
 import {Model} from '../model/model'
 import{Ship} from "./components/ship";
+import {Shooting} from "./components/shooting";
 
 
 export class Views {
@@ -7,6 +8,7 @@ export class Views {
 
     private app: any
     public ship  = new Ship(this.model.ship_X, this.model.ship_Y, this.model.ship_width, this.model.ship_Height )
+    public shooting = new Shooting(this.model.shooting_X, this.model.shooting_Y, this.model.shooting_Width, this.model.shooting_height)
 
 
 
@@ -36,6 +38,7 @@ export class Views {
         this.container = new PIXI.Container
         this.app.stage.addChild(this.container)
         this.container.addChild(this.ship.shipTexture)
+        this.container.addChild(this.shooting.shootingGraphics)
 
 
 
