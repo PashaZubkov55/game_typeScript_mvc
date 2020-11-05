@@ -12,7 +12,7 @@ export class Views {
 
 
 
-    private container: PIXI.Container
+    public container: PIXI.Container
 
     get getShipX(){
         return this.ship.shipTexture.x
@@ -27,6 +27,23 @@ export class Views {
     set setShipY(y: number){
         this.ship.shipTexture.y = y
     }
+
+    get getShooting_X(){
+        return this.shooting.shootingGraphics.x
+    }
+    set setShooting_X(x:number){
+        this.shooting.shootingGraphics.x = x
+    }
+
+    get getShooting_Y(){
+        return this.shooting.shootingGraphics.y
+    }
+
+    set setShooting_Y(y: number){
+        this.shooting.shootingGraphics.y = y
+    }
+
+
 
     intGame() {
         this.app = new PIXI.Application({

@@ -6,7 +6,7 @@ private shipY: number = 450;
 private shootingWidth:number = 15
 private shootingHeight:number = 25
 private shootingX:number = 250
-private shootingY:number = 380
+private shootingY:number = 300
 
      get shooting_Width(){
     return this.shootingWidth
