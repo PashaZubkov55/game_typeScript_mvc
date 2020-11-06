@@ -1,5 +1,6 @@
 import {Model} from '../model/model'
 import{Ship} from "./components/ship";
+import {Shooting} from "./components/shooting";
 
 
 export class Views {
@@ -7,10 +8,11 @@ export class Views {
 
     private app: any
     public ship  = new Ship(this.model.ship_X, this.model.ship_Y, this.model.ship_width, this.model.ship_Height )
+    public shooting = new Shooting(this.model.shooting_X, this.model.shooting_Y, this.model.shooting_Width, this.model.shooting_height)
 
 
 
-    private container: PIXI.Container
+    public container: PIXI.Container
 
     get getShipX(){
         return this.ship.shipTexture.x
@@ -26,6 +28,23 @@ export class Views {
         this.ship.shipTexture.y = y
     }
 
+    get getShooting_X(){
+        return this.shooting.shootingGraphics.x
+    }
+    set setShooting_X(x:number){
+        this.shooting.shootingGraphics.x = x
+    }
+
+    get getShooting_Y(){
+        return this.shooting.shootingGraphics.y
+    }
+
+    set setShooting_Y(y: number){
+        this.shooting.shootingGraphics.y = y
+    }
+
+
+
     intGame() {
         this.app = new PIXI.Application({
             width: 500,
@@ -36,6 +55,7 @@ export class Views {
         this.container = new PIXI.Container
         this.app.stage.addChild(this.container)
         this.container.addChild(this.ship.shipTexture)
+        this.container.addChild(this.shooting.shootingGraphics)
 
 
 
