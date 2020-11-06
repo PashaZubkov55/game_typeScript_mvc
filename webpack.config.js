@@ -1,7 +1,8 @@
 const  path = require('path')
 
 module.exports = {
-    entry: './src/index.ts',
+    context: path.join(__dirname, './src'),
+    entry: './index.ts',
     mode:'development',
     output: {
         filename: 'bundle.js',
@@ -16,7 +17,8 @@ module.exports = {
             {
                 test:/\.tsx?$/,
                 loader: 'awesome-typescript-loader'
-            }
+            },
+
         ]
     },
     optimization: {
