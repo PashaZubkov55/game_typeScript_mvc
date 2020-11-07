@@ -1,20 +1,18 @@
 
 
 export class Ship  {
-    public shipTexture: PIXI.Graphics
-    constructor(  x: number, y: number, width:number, height:number) {
+    public shipGraphics: PIXI.Graphics
+    constructor(  public x: number,public  y: number, public width:number,  public height:number) {
 
+         this.drawShip()
 
-          this.shipTexture = new PIXI.Graphics()
-        this.shipTexture.beginFill(0x4169E1)
-        this.shipTexture.drawEllipse(0,0, width, height)
-       this. shipTexture.endFill()
-        this.shipTexture.x = x
-        this.shipTexture.y = y
-
-
-
-
-
+    }
+    drawShip(){
+        this.shipGraphics = new PIXI.Graphics()
+        this.shipGraphics.beginFill(0x4169E1)
+        this.shipGraphics.drawEllipse(0,0, this.width, this.height)
+        this. shipGraphics.endFill()
+        this.shipGraphics.x =this.x
+        this.shipGraphics.y = this.y
     }
 }

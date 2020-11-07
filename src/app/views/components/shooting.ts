@@ -1,7 +1,7 @@
 export class Shooting {
     public shootingGraphics: PIXI.Graphics
 
-constructor( public x:number, public y: number, public width: number,  public height: number) {
+constructor( public x:number, public y: number,  public width: number,  public height: number) {
         this.drawShooting()
 }
     public drawShooting(){
@@ -10,7 +10,7 @@ constructor( public x:number, public y: number, public width: number,  public he
         this.shootingGraphics.drawRect(0, 0, this.width, this.height)
         this.shootingGraphics.endFill()
         this.shootingGraphics.x = this.x
-            this.shootingGraphics.y = this.y
+        this.shootingGraphics.y = this.y
 
 
 }
