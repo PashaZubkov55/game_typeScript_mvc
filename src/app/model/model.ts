@@ -7,6 +7,8 @@ private shootingWidth:number = 15
 private shootingHeight:number = 25
 private shootingX:number = 250
 private shootingY:number = 300
+     private squareX: number = 15;
+     private squareY: number = 0;
 
      get shooting_Width(){
     return this.shootingWidth
@@ -63,7 +65,19 @@ get ship_Height(){
      set ship_width(width:number){
          this.shipWidth = width
      }
+     get  square_X(){
+         return this.squareX
+     }
+     set  square_X(x:number){
+         this.squareX = x
+     }
 
+     get  square_Y(){
+         return this.squareY
+     }
+     set  square_Y(Y:number){
+         this.squareY = Y
+     }
 
 
 }
