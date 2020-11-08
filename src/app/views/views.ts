@@ -10,7 +10,7 @@ export class Views {
     private app: any
     public ship = new  Ship(this.model.ship_X, this.model.ship_Y, this.model.ship_width, this.model.ship_Height )
     public shooting = new Shooting(this.model.shooting_X, this.model.shooting_Y, this.model.shooting_Width, this.model.shooting_height)
-    public square = new Square(this.model.square_X, this.model.square_Y, this.model.square_Width, this.model.square_height)
+    public square = new Square(this.model.square_X, this.model.square_Y,)
 
 
     public container: PIXI.Container
