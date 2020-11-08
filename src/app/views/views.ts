@@ -2,6 +2,7 @@ import {Model} from '../model/model'
 import{Ship} from "./components/ship";
 import {Shooting} from "./components/shooting";
 import {Square} from "./components/square"
+import {Counter} from './components/counter'
 
 
 export class Views {
@@ -11,6 +12,7 @@ export class Views {
     public ship = new  Ship(this.model.ship_X, this.model.ship_Y, this.model.ship_width, this.model.ship_Height )
     public shooting = new Shooting(this.model.shooting_X, this.model.shooting_Y, this.model.shooting_Width, this.model.shooting_height)
     public square = new Square(this.model.square_X, this.model.square_Y,)
+    public counter = new Counter(this.model.counterMiss, this.model.counterHit)
 
 
     public container: PIXI.Container
@@ -59,6 +61,18 @@ export class Views {
 
     }
 
+    get getCounterHit(){
+        return this.counter.counterHit.text
+    }
+    set setCounterHit(value:number){
+        this.counter.counterHit.text = value
+    }
+    get getCounterMiss(){
+        return this.counter.counterMiss.text
+    }
+    set setCounterMiss(value:number){
+        this.counter.counterMiss.text = value
+    }
 
 
     intGame() {
@@ -74,6 +88,9 @@ export class Views {
         this.container.addChild(this.ship.shipGraphics)
         this.container.addChild(this.shooting.shootingGraphics)
         this.container.addChild(this.square.squareGraphics)
+        this.container.addChild(this.counter.counterMiss)
+        this.container.addChild(this.counter.counterHit)
+
 
 
 

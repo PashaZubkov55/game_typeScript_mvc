@@ -6,9 +6,9 @@ import{Model} from "../model/model";
 export class Controller {
     private movement: number = this.model.ship_X
     private shot: number = this.model.shooting_Y
-    private squareInterval: number = this.model.square_Y
-    private squareX: number = this.model.square_X
     private containerWidth: number = 500
+
+
 
     constructor(private view: Views, private model: Model) {
         this.intervalShot()
@@ -62,16 +62,23 @@ export class Controller {
 
     intervalSquare() {
         let distanceSquareX = Math.random() * this.containerWidth
-
+        let counterHit = 0
+        let counterMiss = 0
         let squareY = 0
         let interval = setInterval(() => {
             if (this.collision(this.view.square.squareGraphics, this.view.shooting.shootingGraphics)){
                 distanceSquareX = Math.random() * this.containerWidth
                 squareY = 0
+                counterHit = counterHit + 1
+                this.model.counterHit = counterHit
+                this.view.setCounterHit = this.model.counterHit
             }
             else if (squareY > 500){
                 distanceSquareX = Math.random() * this.containerWidth
                 squareY = 0
+                counterMiss = counterMiss + 1
+                this.model.counterMiss = counterMiss
+                this.view.setCounterMiss = this.model.counterMiss
             }
             squareY += 30
             this.model.square_X = distanceSquareX
