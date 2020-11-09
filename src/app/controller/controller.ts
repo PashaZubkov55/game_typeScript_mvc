@@ -31,16 +31,16 @@ export class Controller {
         this.movement -= 5
         this.model.ship_X = this.movement
         this.model.shooting_X = this.movement
-        this.view.setShipX = this.model.ship_X
-        this.view.setShooting_X = this.model.shooting_X
+        this.view.ShipX = this.model.ship_X
+        this.view.Shooting_X = this.model.shooting_X
     }
 
     movementRight() {
         this.movement += 5
         this.model.ship_X = this.movement
         this.model.shooting_X = this.movement
-        this.view.setShipX = this.model.ship_X
-        this.view.setShooting_X = this.model.shooting_X
+        this.view.ShipX = this.model.ship_X
+        this.view.Shooting_X = this.model.shooting_X
 
     }
 
@@ -48,11 +48,11 @@ export class Controller {
         let interval = setInterval(() => {
             this.shot -= 30
             this.model.shooting_Y = this.shot
-            this.view.setShooting_Y = this.model.shooting_Y
+            this.view.Shooting_Y = this.model.shooting_Y
             if (this.shot < 0) {
                 this.shot = 380
                 this.model.shooting_Y = this.shot
-                this.view.setShooting_Y = this.model.shooting_Y
+                this.view.Shooting_Y = this.model.shooting_Y
 
 
             }
@@ -71,20 +71,20 @@ export class Controller {
                 squareY = 0
                 counterHit = counterHit + 1
                 this.model.counterHit = counterHit
-                this.view.setCounterHit = this.model.counterHit
+                this.view.CounterHit = this.model.counterHit
             }
             else if (squareY > 500){
                 distanceSquareX = Math.random() * this.containerWidth
                 squareY = 0
                 counterMiss = counterMiss + 1
                 this.model.counterMiss = counterMiss
-                this.view.setCounterMiss = this.model.counterMiss
+                this.view.CounterMiss = this.model.counterMiss
             }
             squareY += 30
             this.model.square_X = distanceSquareX
-            this.view.setSquare_X = this.model.square_X
+            this.view.Square_X = this.model.square_X
             this.model.square_Y = squareY
-            this.view.setSquare_Y = this.model.square_Y
+            this.view.Square_Y = this.model.square_Y
 
         }, 1000)
     }

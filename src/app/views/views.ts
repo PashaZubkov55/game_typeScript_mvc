@@ -17,60 +17,60 @@ export class Views {
 
     public container: PIXI.Container
 
-    get getShipX(){
+    get ShipX(){
         return this.ship.shipGraphics.x
 
     }
-    set setShipX(x: number){
+    set ShipX(x: number){
       this.ship.shipGraphics.x = x
     }
-    get getShipY(){
+    get ShipY(){
         return this.ship.shipGraphics.y
     }
-    set setShipY(y: number){
+    set ShipY(y: number){
         this.ship.shipGraphics.y = y
     }
 
-    get getShooting_X(){
+    get Shooting_X(){
         return this.shooting.shootingGraphics.x
     }
-    set setShooting_X(x:number){
+    set Shooting_X(x:number){
         this.shooting.shootingGraphics.x = x
     }
 
-    get getShooting_Y(){
+    get Shooting_Y(){
         return this.shooting.shootingGraphics.y
     }
 
-    set setShooting_Y(y: number){
+    set Shooting_Y(y: number){
         this.shooting.shootingGraphics.y = y
     }
 
-    set setSquare_X(x: number){
+    set Square_X(x: number){
         this.square.squareGraphics.x = x
     }
-    get  getSquare_X(){
+    get  Square_X(){
        return  this.square.squareGraphics.x
     }
-    set setSquare_Y(y:number){
+    set Square_Y(y:number){
         this.square.squareGraphics.y = y
     }
 
-    get getSquare_Y(){
+    get Square_Y(){
         return this.square.squareGraphics.y
 
     }
 
-    get getCounterHit(){
+    get CounterHit(){
         return this.counter.counterHit.text
     }
-    set setCounterHit(value:number){
+    set CounterHit(value:number){
         this.counter.counterHit.text = value
     }
-    get getCounterMiss(){
+    get CounterMiss(){
         return this.counter.counterMiss.text
     }
-    set setCounterMiss(value:number){
+    set CounterMiss(value:number){
         this.counter.counterMiss.text = value
     }
 
