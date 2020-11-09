@@ -7,6 +7,10 @@ private shootingWidth:number = 15
 private shootingHeight:number = 25
 private shootingX:number = 250
 private shootingY:number = 300
+     private squareX: number = 15;
+     private squareY: number = 0;
+     private textHit :number = 0;
+     private textMiss :number  = 0
 
      get shooting_Width(){
     return this.shootingWidth
@@ -63,7 +67,32 @@ get ship_Height(){
      set ship_width(width:number){
          this.shipWidth = width
      }
+     get  square_X(){
+         return this.squareX
+     }
+     set  square_X(x:number){
+         this.squareX = x
+     }
+
+     get  square_Y(){
+         return this.squareY
+     }
+     set  square_Y(Y:number){
+         this.squareY = Y
+     }
+     get counterMiss(){
+         return this.textMiss
+     }
+     set counterMiss(value:number){
+         this.textMiss = value
+     }
+     get counterHit(){
+         return this.textHit
+     }
+     set counterHit(value:number){
+         this.textHit = value
+     }
 
 
 
-}
+ }
